@@ -10,7 +10,7 @@ function App() {
       <div>
         <Header headerConfig={HeaderConfig} />
         <Register />
-        {/* <Practice /> */}
+        {/* < Practice /> */}
       </div>
     </>
   );

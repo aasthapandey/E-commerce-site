@@ -3,12 +3,22 @@ import { Dropdown } from "../components/Dropdown";
 import { RegisterConfig } from "../utils/config";
 
 export const Register = () => {
+  const countryList = [
+    {
+      value: "IN",
+      text: "India",
+    },
+    {
+      value: "USA",
+      text: "United States Of America",
+    },
+  ];
   return (
     <form className="container mt-4">
       <TextBox textboxConfig={RegisterConfig.FirstName} />
       <TextBox textboxConfig={RegisterConfig.LastName} />
       <TextBox textboxConfig={RegisterConfig.Email} />
-      <Dropdown dropdownConfig={RegisterConfig.Country} />
+      <Dropdown dropdownConfig={RegisterConfig.Country} list={countryList} />
       <TextBox textboxConfig={RegisterConfig.Password} />
       <TextBox textboxConfig={RegisterConfig.ConfirmPassword} />
       <fieldset class="row mb-3">

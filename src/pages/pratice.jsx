@@ -1,4 +1,4 @@
-export const Practice = ({textboxConfig}) => {
+export const Practice = ({ textboxConfig }) => {
   return (
     <form>
       <div style={{ display: "flex", margin: "10px" }}>
@@ -11,6 +11,16 @@ export const Practice = ({textboxConfig}) => {
         <label>Password</label>
         <div style={{ marginLeft: "20px" }}>
           <input type="text" />
+        </div>
+      </div>
+      <div style={{ display: "flex", margin: "10px" }}>
+        <label for="countryDropdown">Country</label>
+        <div style={{ marginLeft: "20px" }}>
+          <select id="countryDropdown" name="country">
+            <option value="">Select country</option>
+            <option value="IN">India</option>
+            <option value="USA">United States of America</option>
+          </select>
         </div>
       </div>
       <div style={{ display: "flex", margin: "10px" }}>
