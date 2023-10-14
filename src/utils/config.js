@@ -28,3 +28,41 @@ export const HeaderConfig = {
     },
   ],
 };
+
+export const RegisterConfig = {
+  FirstName: {
+    id: "FirstName",
+    name: "FirstName",
+    label: "First Name",
+    type: "text",
+    placeholder: "Enter First Name",
+  },
+  LastName: {
+    id: "LastName",
+    name: "LastName",
+    label: "Last Name",
+    type: "text",
+    placeholder: "Enter Last Name",
+  },
+  Email: {
+    id: "Email",
+    name: "Email",
+    label: "Email",
+    type: "email",
+    placeholder: "Enter Email",
+  },
+  Password: {
+    id: "Password",
+    name: "password",
+    label: "Password",
+    type: "password",
+    placeholder: "Enter Password",
+  },
+  ConfirmPassword: {
+    id: "ConfirmPassword",
+    name: "ConfirmPassword",
+    label: "Confirm Password",
+    type: "password",
+    placeholder: "Enter Confirmed Password",
+  },
+};
