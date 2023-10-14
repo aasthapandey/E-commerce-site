@@ -51,6 +51,13 @@ export const RegisterConfig = {
     type: "email",
     placeholder: "Enter Email",
   },
+  Country: {
+    id: "Country",
+    name: "Country",
+    label: "Country",
+    type: "dropdown",
+    placeholder: "Select Country",
+  },
   Password: {
     id: "Password",
     name: "password",

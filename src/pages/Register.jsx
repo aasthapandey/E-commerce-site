@@ -1,4 +1,5 @@
 import { TextBox } from "../components/Textbox";
+import { Dropdown } from "../components/Dropdown";
 import { RegisterConfig } from "../utils/config";
 
 export const Register = () => {
@@ -7,6 +8,7 @@ export const Register = () => {
       <TextBox textboxConfig={RegisterConfig.FirstName} />
       <TextBox textboxConfig={RegisterConfig.LastName} />
       <TextBox textboxConfig={RegisterConfig.Email} />
+      <Dropdown dropdownConfig={RegisterConfig.Country} />
       <TextBox textboxConfig={RegisterConfig.Password} />
       <TextBox textboxConfig={RegisterConfig.ConfirmPassword} />
       <fieldset class="row mb-3">
