@@ -36,6 +36,7 @@ export const RegisterConfig = {
     label: "First Name",
     type: "text",
     placeholder: "Enter First Name",
+    defaultValue: "",
   },
   LastName: {
     id: "LastName",
@@ -43,6 +44,7 @@ export const RegisterConfig = {
     label: "Last Name",
     type: "text",
     placeholder: "Enter Last Name",
+    defaultValue: "",
   },
   Email: {
     id: "Email",
@@ -50,6 +52,7 @@ export const RegisterConfig = {
     label: "Email",
     type: "email",
     placeholder: "Enter Email",
+    defaultValue: "",
   },
   Country: {
     id: "Country",
@@ -57,6 +60,7 @@ export const RegisterConfig = {
     label: "Country",
     type: "dropdown",
     placeholder: "Select Country",
+    defaultValue: "",
   },
   Password: {
     id: "Password",
@@ -64,6 +68,7 @@ export const RegisterConfig = {
     label: "Password",
     type: "password",
     placeholder: "Enter Password",
+    defaultValue: "",
   },
   ConfirmPassword: {
     id: "ConfirmPassword",
@@ -71,5 +76,36 @@ export const RegisterConfig = {
     label: "Confirm Password",
     type: "password",
     placeholder: "Enter Confirmed Password",
+    defaultValue: "",
   },
+  Gender: {
+    id: "Gender",
+    name: "Gender",
+    label: "Gender",
+    options: [
+      {
+        id: "Male",
+        label: "Male",
+        value: "M",
+      },
+      {
+        id: "Female",
+        label: "Female",
+        value: "F",
+      },
+      {
+        id: "NA",
+        label: "Do Not Disclose",
+        value: "NA",
+      },
+    ],
+  },
+  AgreeTerms: {
+    id: "AgreeTerms",
+    name: "AgreeTerms",
+    label: "I agree terms and conditions",
+    type: "checkbox",
+    placeholder: "",
+    defaultValue: "",
+  }
 };
