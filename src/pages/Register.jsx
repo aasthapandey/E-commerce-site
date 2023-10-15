@@ -7,6 +7,7 @@ import { useState } from "react";
 
 export const Register = () => {
   const [register, setRegister] = useState({});
+  const [isButtonEnabled, setEnabled] = useState(false);
   const countryList = [
     {
       value: "IN",
@@ -21,6 +22,7 @@ export const Register = () => {
     const state = register;
     if (target.type === "checkbox") {
       state[target.name] = target.checked;
+      setEnabled(target.checked);
     } else {
       state[target.name] = target.value;
     }
@@ -36,7 +38,10 @@ export const Register = () => {
         textboxConfig={RegisterConfig.LastName}
         handleTextboxChange={handleChange}
       />
-      <TextBox textboxConfig={RegisterConfig.Email} handleTextboxChange={handleChange} />
+      <TextBox
+        textboxConfig={RegisterConfig.Email}
+        handleTextboxChange={handleChange}
+      />
       <Dropdown
         dropdownConfig={RegisterConfig.Country}
         list={countryList}
@@ -50,15 +55,19 @@ export const Register = () => {
         textboxConfig={RegisterConfig.ConfirmPassword}
         handleTextboxChange={handleChange}
       />
-      <Radio radioConfig={RegisterConfig.Gender} handleRadioChange={handleChange} />
+      <Radio
+        radioConfig={RegisterConfig.Gender}
+        handleRadioChange={handleChange}
+      />
       <Checkbox
         checkboxConfig={RegisterConfig.AgreeTerms}
         handleCheckboxChange={handleChange}
       />
-      {JSON.stringify(register)}
-      <button type="submit" class="btn btn-primary">
-        Sign in
-      </button>
+      {isButtonEnabled ? (
+        <button type="submit" class="btn btn-primary">
+          Sign in
+        </button>
+      ) : null}
     </form>
   );
 };

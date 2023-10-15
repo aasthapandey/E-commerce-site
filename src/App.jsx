@@ -2,6 +2,7 @@ import "./App.css";
 import { Header } from "./components/Header/index";
 import { HeaderConfig } from "./utils/config";
 import { Register } from "./pages/Register";
+import { UserList } from "./pages/UserList";
 import { Practice } from "./pages/pratice";
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
     <>
       <div>
         <Header headerConfig={HeaderConfig} />
-        <Register />
+        <UserList />
+        {/* <Register /> */}
         {/* < Practice /> */}
       </div>
     </>
