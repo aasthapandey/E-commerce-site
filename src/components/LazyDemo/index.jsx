@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 function LazyDemo({ userId }) {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({});
 
   useEffect(() => {
     setTimeout(async () => {
