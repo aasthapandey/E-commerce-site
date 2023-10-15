@@ -1,5 +1,5 @@
 import { useState } from "react";
-export const Checkbox = ({ checkboxConfig, onchange }) => {
+export const Checkbox = ({ checkboxConfig, handleCheckboxChange }) => {
   const [isChecked, setChecked] = useState();
   return (
     <div class="row mb-3">
@@ -12,7 +12,7 @@ export const Checkbox = ({ checkboxConfig, onchange }) => {
             id={checkboxConfig.id}
             checked={isChecked}
             onChange={(e) => {
-              onchange(e.target);
+                handleCheckboxChange(e.target);
               setChecked(e.target.value);
             }}
           />

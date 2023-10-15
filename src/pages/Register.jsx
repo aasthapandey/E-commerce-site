@@ -30,31 +30,32 @@ export const Register = () => {
     <form className="container mt-4">
       <TextBox
         textboxConfig={RegisterConfig.FirstName}
-        onchange={handleChange}
+        handleTextboxChange={handleChange}
       />
       <TextBox
         textboxConfig={RegisterConfig.LastName}
-        onchange={handleChange}
+        handleTextboxChange={handleChange}
       />
-      <TextBox textboxConfig={RegisterConfig.Email} onchange={handleChange} />
+      <TextBox textboxConfig={RegisterConfig.Email} handleTextboxChange={handleChange} />
       <Dropdown
         dropdownConfig={RegisterConfig.Country}
         list={countryList}
-        onchange={handleChange}
+        handleDropdownChange={handleChange}
       />
       <TextBox
         textboxConfig={RegisterConfig.Password}
-        onchange={handleChange}
+        handleTextboxChange={handleChange}
       />
       <TextBox
         textboxConfig={RegisterConfig.ConfirmPassword}
-        onchange={handleChange}
+        handleTextboxChange={handleChange}
       />
-      <Radio radioConfig={RegisterConfig.Gender} onchange={handleChange} />
+      <Radio radioConfig={RegisterConfig.Gender} handleRadioChange={handleChange} />
       <Checkbox
         checkboxConfig={RegisterConfig.AgreeTerms}
-        onchange={handleChange}
+        handleCheckboxChange={handleChange}
       />
+      {JSON.stringify(register)}
       <button type="submit" class="btn btn-primary">
         Sign in
       </button>

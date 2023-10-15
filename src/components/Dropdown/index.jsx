@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const Dropdown = ({ dropdownConfig, list, onchange }) => {
+export const Dropdown = ({ dropdownConfig, list, handleDropdownChange }) => {
   const [data, setData] = useState(dropdownConfig.defaultValue);
   const options = () => {
     if (list && list.length > 0) {
@@ -21,7 +21,7 @@ export const Dropdown = ({ dropdownConfig, list, onchange }) => {
           name={dropdownConfig.name}
           value={data}
           onChange={(e) => {
-            onchange(e.target);
+            handleDropdownChange(e.target);
             setData(e.target.value);
           }}
         >

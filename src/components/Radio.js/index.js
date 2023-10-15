@@ -1,5 +1,5 @@
 import { useState } from "react";
-export const Radio = ({ radioConfig, onchange }) => {
+export const Radio = ({ radioConfig, handleRadioChange }) => {
   const [choice, setChoice] = useState();
 
   const buildChoice = () => {
@@ -14,7 +14,7 @@ export const Radio = ({ radioConfig, onchange }) => {
             value={option.value}
             checked={option.value == choice}
             onChange={(e) => {
-              onchange(e.target);
+              handleRadioChange(e.target);
               setChoice(e.target.value);
             }}
           />

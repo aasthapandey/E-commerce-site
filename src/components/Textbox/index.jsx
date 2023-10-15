@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const TextBox = ({ textboxConfig, onchange }) => {
+export const TextBox = ({ textboxConfig, handleTextboxChange }) => {
   const [data, setData] = useState(textboxConfig.defaultValue);
   return (
     <div class="row mb-3">
@@ -16,7 +16,7 @@ export const TextBox = ({ textboxConfig, onchange }) => {
           name={textboxConfig.name}
           value={data}
           onChange={(e) => {
-            onchange(e.target); //here we get name & value from target
+            handleTextboxChange(e.target); //here we send the value to parent
             setData(e.target.value);
           }}
         />
